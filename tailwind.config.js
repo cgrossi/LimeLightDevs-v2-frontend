@@ -5,7 +5,7 @@ module.exports = {
     defaultLineHeights: true,
     standardFontWeights: true,
   },
-  expirmental: {
+  experimental: {
     additionalBreakpoint: true,
     applyComplexClasses: true,
     extendedFontSizeScale: true,
@@ -14,7 +14,11 @@ module.exports = {
   // nuxt tailwind handles this by default so no need to configure
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'custom-green-100': '#4dff64',
+      },
+    },
   },
   variants: {},
   plugins: [],
