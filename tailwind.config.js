@@ -26,8 +26,19 @@ module.exports = {
       fontFamily: {
         hibana: ['Hibana', 'Roboto', 'sans-serif'],
       },
+      width: {
+        '9/10': '90%',
+      },
     },
   },
-  variants: {},
+  variants: {
+    borderStyle: ['responsive', 'hover', 'focus'],
+    height: ['responsive', 'hover', 'focus'],
+    minWidth: ['responsive', 'hover', 'focus'],
+  },
   plugins: [],
+  minWidth: {
+    '1/2': '50%',
+    '3/4': '75%',
+          }
 }

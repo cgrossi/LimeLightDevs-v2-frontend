@@ -1,32 +1,15 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title text-2xl">{{ name }}</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+    <Packages />
   </div>
 </template>
 
 <script>
+import packages from '@/components/packages.vue'
 export default {
+  components: {
+    packages,
+  },
   setup() {
     const name = 'Limelight Devs'
     return { name }
@@ -44,6 +27,7 @@ export default {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
