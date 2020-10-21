@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen text-white bg-app-gray-1 antialiased">
-    <Icon class="w-64 mx-auto" name="DottedLine" />
     <Nuxt />
   </div>
 </template>

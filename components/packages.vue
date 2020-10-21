@@ -1,28 +1,47 @@
 <template>
   <div class="w-9/10">
-    <h3 class="text-2xl font-semibold text-left mb-5">Our Packages</h3>
-    <div class="w-full overflow-x-auto">
-      <div class="w-full flex rounded-lg">
+    <h3
+      class="text-2xl lg:text-4xl font-semibold mb-3 lg:mb-0 text-left tracking-wide"
+    >
+      Our Packages
+    </h3>
+    <ul
+      class="hidden lg:flex text-sm list-none flex-no-wrap justify-end space-x-12 mr-2 mb-3"
+    >
+      <li>extra</li>
+      <li>Figma</li>
+      <li class="text-app-green-1 underline">e-commerce</li>
+      <li>Basic</li>
+    </ul>
+
+    <div class="w-full lg:rounded-2xl lg:shadow-2xl overflow-x-auto">
+      <div class="w-full flex">
         <div
           v-for="(item, id) in Packages"
           :key="id"
-          class="px-6 py-4 mx-4 lg:min-w-0 lg:m-0 border-r-2 bg-app-gray-2 min-w-full text-sm border-app-gray-1 shadow-2xl h-auto"
+          class="package px-6 py-4 flex lg:min-w-0 flex-col items-center rounded-3xl lg:rounded-none mx-2 lg:m-0 border-r-2 bg-app-gray-2 min-w-3/4 text-sm border-app-gray-1 shadow-2xl lg:shadow-none h-auto"
         >
-          <img :src="item.img" alt="pack" />
-          <img src="/static/packages/leaf.png" alt="" />
-          <h4 class="text-xl mb-4 font-medium">{{ item.package }}</h4>
-          <p>{{ item.desc }}</p>
-          <p class="mt-4">{{ item.works }}</p>
+          <img class="my-4" :src="'/packages/' + item.img" alt="pack" />
+          <!-- <img src="/packages/Edit4.png" alt=""> -->
+          <h4 class="text-xl mb-2 font-medium">{{ item.package }}</h4>
+          <p class="mb-4">{{ item.desc }}</p>
+          <p><span class="font-bold">3</span> App pages</p>
+          <p><span class="font-bold">5</span> Stock images</p>
+          <p><span class="font-bold">2</span> Design revision</p>
+          <p><span class="font-bold">1</span> Development revision</p>
+          <p>Unlimited Contact</p>
           <p class="mt-4">
             <span class="mr-2 text-sm line-through"
               >${{ item.slashedPrice }}</span
             >
-            <span class="text-app-green-1 text-xl line-through font-medium"
+            <span class="text-app-green-1 text-xl font-medium"
               >${{ item.price }}</span
             >
           </p>
           <ButtonComp />
-          <p>Edit request? <span class="font-medium">ContactUs</span></p>
+          <p class="mt-2">
+            Edit request? <span class="font-medium">ContactUs</span>
+          </p>
         </div>
       </div>
     </div>
@@ -41,43 +60,43 @@ export default {
       Packages: [
         {
           id: 0,
-          img: '/static/packages/personalized.png',
+          img: 'appdev.png',
           package: 'App development',
           desc:
-            'with additional offline features enabled by desktop applications for macOS and Windows',
-          works: 'hear fromme when we meet on  on tge batteke grouhnd',
+            'App devLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatuporro, architecto totam recusandae praesentium.',
+
           slashedPrice: 240,
-          price: 210,
+          price: 149,
         },
         {
           id: 1,
-          img: '/static/packages/personalized.png',
+          img: 'desktop.png',
           package: 'Web development',
           desc:
-            'with additional offline features enabled by desktop applications for macOS and Windows',
-          works: 'hear fromme when we meet on  on tge batteke grouhnd',
+            'App devLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatuporro, architecto totam recusandae praesentium.',
+
           slashedPrice: 149,
-          price: 120,
+          price: 299,
         },
         {
           id: 2,
-          img: '/static/packages/personalized.png',
-          package: 'full development',
+          img: 'appdev.png',
+          package: 'Full development',
           desc:
-            'with additional offline features enabled by desktop applications for macOS and Windows',
-          works: 'hear fromme when we meet on  on tge batteke grouhnd',
+            'App devLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatuporro, architecto totam recusandae praesentium.',
+
           slashedPrice: 120,
-          price: 128,
+          price: 999,
         },
         {
           id: 3,
-          img: '/static/packages/personalized.png',
-          package: 'personalised',
+          img: 'Edit4.png',
+          package: 'Personalised',
           desc:
-            'with additional offline features enabled by desktop applications for macOS and Windows',
-          works: 'hear fromme when we meet on  on tge batteke grouhnd',
+            'App devLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatuporro, architecto totam recusandae praesentium.',
+
           slashedPrice: 399,
-          price: 129,
+          price: '1000+',
         },
       ],
     }
@@ -85,4 +104,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+@media (min-width: 1024px) {
+  .package {
+    min-width: 0;
+  }
+}
+</style>

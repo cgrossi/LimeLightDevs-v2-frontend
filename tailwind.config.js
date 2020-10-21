@@ -30,15 +30,17 @@ module.exports = {
         '9/10': '90%',
       },
     },
+    minWidth: {
+      '0':'0%',
+      '1/2': '50%',
+      '3/4': '75%',
+    },
   },
   variants: {
     borderStyle: ['responsive', 'hover', 'focus'],
     height: ['responsive', 'hover', 'focus'],
     minWidth: ['responsive', 'hover', 'focus'],
+    backgroundColor: ['responsive', 'hover', 'focus'],
   },
   plugins: [],
-  minWidth: {
-    '1/2': '50%',
-    '3/4': '75%',
-          }
 }
